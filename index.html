@@ -8,7 +8,7 @@
         <meta name="description" content="description here">
         <meta name="keywords" content="keywords,here">
         <link rel="shortcut icon" href="assets/favicon/d10logo2.png" type="image/vnd.microsoft.icon"> <!-- Insert the right type -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" type="text/javascript"></script>
         <!-- FONT AWESOME CDN -->
         <script src="https://use.fontawesome.com/9b071ecee5.js"></script>
         <!-- BOOTSTRAP CDN -->
@@ -21,7 +21,14 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,600" rel="stylesheet">
         <!-- <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'> -->
-        <link rel="stylesheet" href="stylesheet.css" type="text/css">   
+        <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+
+        <!-- FLEXSLIDER requires jQuery version 2.2.4. 3.2.1 is incompatible --> 
+        <script src="js/index.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+        <!-- <script src="js/jquery.flexslider.js"></script> -->
+
     </head>
 
     <body>
@@ -44,36 +51,72 @@
                             <li>About Us</li>
                             <li>References</li>
                             <li>Portfolio</li>
-                            <li>Contact Us</li>
+                            <li class="contact-us">Contact Us</li>
                         </ul>
                     </nav>
-                </div>
 
+                </div>
             </header>
 
-            <section class="intro">
-                <div class="intro-inner">
-                    <h2>Express Yourself</h2>
-                    <p>D10 Signs & Graphics is your premier resource for signage graphics, metal/plastic fabrications installations.</p>
+            <div class="row">
+                <section class="intro">
+                    <div class="intro-inner">
+                        <h1>Express Yourself</h1>
+                        <p>D10 Signs & Graphics is your premier resource for signage graphics, metal/plastic fabrications installations.</p>
+                    </div>
+                </section>
+
+                <section class="down-chevron">
+                    &#x25be;
+                </section>
+
+                <section class="main">
+                    <!-- FLEXSLIDER randomize: true. Also added Quick fix in flexslider.css - line 93 -->
+                    <div class="flexslider" style="width: 800px; margin: 0 auto;"> <!-- inline style to adjust size of Flexslider -->
+                      <ul class="slides">
+                        <li>
+                          <img src="assets/img/kexp-wall.jpg" />
+                        </li>
+                        <li>
+                          <img src="assets/img/chiefsealth.jpg" />
+                        </li>
+                        <li>
+                          <img src="assets/img/hcl.jpg" />
+                        </li>
+                        <li>
+                          <img src="assets/img/jll.jpg" />
+                        </li>
+                      </ul>
+                    </div>
+                </section>
+            
+                <section class="contact-form-inner">
+                    Contact Form    
+                </section>
+
+            <!-- </div> -->
+            
+            <div class="row footer-row">
+                    <section class="footer"> <!-- TODO: Footer is not containing iFrame content -->
+                        <section class="col-md-4">
+                            <iframe width="100%" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d631.1338198733573!2d-122.16176394869707!3d47.68433654688771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549012a13190dd03%3A0x2c8b6acdcc8b79a3!2sAmerican+Marketing!5e0!3m2!1sen!2sus!4v1491939434320" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </section>
+                        <section class="col-md-4">
+                            <p>D10 Signs</p>
+                            <p>12700 NE 124th ST, Suite 204</p>
+                            <p>p | 425-828-0177</p>
+                            <p>f | 555-555-0555</p>
+                            <p>e | contact@d10signs.org</p>
+                            
+                        </section>
+                        <section class="social col-md-4">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <i class="fa fa-bath" aria-hidden="true"></i>
+                        </section>
+                        <section class="legal col-md-12">&copy; D10Signs | American Marketing</section>
+                    </section>
                 </div>
-            </section>
-
-            <!-- <section class="main">
-                <h2>Carousel</h2>
-                <ul>
-                    <li><img src="assets/img/hcl-cropped.jpg" alt=""></li>
-                    <li><img src="assets/img/shorewood-hs-cropped.jpg" alt=""></li>
-                    <li><img src="assets/img/jll.jpg" alt=""></li>
-                    <li><img src="assets/img/KEXP-donor-wall.jpg" alt=""></li>
-                </ul>
-            </section>
-
-            <footer>
-                <section class="col-md-4"><img src="assets/img/d10gmap.png" alt=""></section>
-                <section class="col-md-4">contact</section>
-                <section class="col-md-4"><i class="fa fa-envelope-o" aria-hidden="true"></i></section>
-                <section class="legal">&copy; D10Signs | American Marketing</section>
-            </footer> -->
+            </div>
 
         </div>
  

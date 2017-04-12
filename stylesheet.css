@@ -27,6 +27,7 @@ nav {
 body {
 	/*font-family: 'Nunito', sans-serif;*/
 	font-family: 'Oswald', sans-serif;
+	background: linear-gradient(to top, #42BFC1 0%,#4A61B0 0%,#42BFC1 100%);
 }
 
 .brand {
@@ -74,7 +75,14 @@ body {
 	transform: translate(-50%, -50%);
 }
 
+/*.flexslider .slides .test img{
+	width: 450px;
+    height: 450px;
+}*/
 
+.legal {
+	text-align: center;
+}
 
 
 

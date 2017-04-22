@@ -28,6 +28,10 @@ p {
 	font-size: 16px;
 }
 
+.flex {
+	display: flex;
+}
+
 /* CLEAR */
 .clear {
     content: "";
@@ -47,6 +51,8 @@ header {
 
 hr {
 	border-top: 1px solid #333;
+	margin: 20px auto;
+	width: 300px;
 }
 
 .uppercase {
@@ -97,7 +103,6 @@ hr {
 }
 
 .header-inner {
-	display: flex;
 	justify-content: space-between;
 }
 
@@ -349,7 +354,7 @@ fieldset {
 
 
 
-.about-intro {
+.about-intro, .client-intro {
 	margin: 0 auto;
 	margin-bottom: 50px;
 	max-width: 750px;
@@ -391,19 +396,65 @@ fieldset {
 .clients {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .clients .client:not(:last-child) {
-	margin-right: 4px;
+	/*margin-right: 4px;*/
 }
 
 .clients .client {
-	border: 1px solid #000;
+	/*border: 1px solid #000;*/
+	filter: grayscale(100%);
 	border-radius: 4px;
-	background: url(../assets/img/targetBullsEye_200x200.png) no-repeat 50% 50%;
-	background-size: contain;
-	width: 100%;
+	margin-bottom: 20px;
+	width: 	180px;
 	height: 120px;
+	transition: filter 500ms;
+}
+
+.clients .client.target {
+	background: url(../assets/img/target.png) no-repeat 50% 50%;
+	background-size: contain;
+}
+
+.clients .client.kexp {
+	background: url(../assets/img/kexp.png) no-repeat 50% 50%;
+	background-size: contain;
+}
+
+.clients .client.cush-wake {
+	background: url(../assets/img/cush-wake.png) no-repeat 50% 50%;
+	background-size: contain;
+}
+
+.clients .client.seattle-bank {
+	background: url(../assets/img/seattle-bank.png) no-repeat 50% 50%;
+	background-size: contain;
+}
+
+.clients .client.jll {
+	background: url(../assets/img/jll-client.png) no-repeat 50% 50%;
+	background-size: contain;
+}
+
+.clients .client.nor-cruise {
+	background: url(../assets/img/nor-cruise.png) no-repeat 50% 50%;
+	background-size: contain;
+}
+
+.clients .client.hcl {
+	background: url(../assets/img/hcl-client.png) no-repeat 50% 50%;
+	background-size: contain;
+}
+
+.clients .client.king-county {
+	background: url(../assets/img/chh.png) no-repeat 50% 50%;
+	background-size: contain;
+}
+
+.clients .client:hover {
+	filter: none;
 }
 
 .clients .client img {

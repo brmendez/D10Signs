@@ -33,12 +33,11 @@
 
     <body>
         <div class="container-fluid">
-            <header>
+            <div id="header"></div>
+            <header> <!-- TODO: DELETE WHEN DEPLOYED! -->
                 <div class="header-inner">
                     <section class="brand">
-                        <!-- <a href="#" id="logo"> -->
-                            <img src="assets/img/d10logocopy.png" alt="logo">
-                        <!-- </a> -->
+                        <img src="assets/img/d10logocopy.png" alt="logo">
                         <aside class="logo-text">
                             <h1>D10</h1>
                             <h3 style="font-weight: 300;">SIGNS AND GRAPHICS</h3>
@@ -48,21 +47,23 @@
                     <nav>
                         <ul class="nav-list-items">
                             <li>Home</li>
-                            <li>About Us</li>
+                            <li><a href="about.html">About Us</a></li>
                             <li>References</li>
                             <li>Portfolio</li>
+                            <li>Labels/Printing</li>
+                            <li>Decorated Apparel</li>
                             <li class="contact-us">Contact Us</li>
                         </ul>
                     </nav>
 
                 </div>
-            </header>
+            </header> <!-- TODO: DELETE WHEN DEPLOYED! -->
 
             <div class="row">
                 <section class="intro">
                     <div class="intro-inner">
                         <h1>Express Yourself</h1>
-                        <p>D10 Signs & Graphics is your premier resource for signage graphics, metal/plastic fabrications installations.</p>
+                        <p class="subtext">D10 Signs and Graphics is your premier resource for signage graphics, metal/plastic fabrications installations.</p>
                     </div>
                 </section>
 
@@ -90,14 +91,25 @@
                     </div>
                 </section>
             
-                <section class="contact-form-inner">
-                    Contact Form    
+                <section class="contact-form">
+                    <H2>GET IN TOUCH</H2>
+                    <p class="subtext">Request a quote</p>
+                    <div class="contact-form-inner">  
+                            <form id="contact" method="post">
+                                <fieldset>
+                                    <input name="name" placeholder="NAME*" required>
+                                    <input type="email" name="email" placeholder="EMAIL*" required>
+                                    <input type="tel" name="phone" placeholder="PHONE">
+                                    <textarea name="message" placeholder="YOUR MESSAGE*" id="" required></textarea>
+                                    <button id="contact-submit" name="submit" type="submit">SEND</button>
+                                </fieldset>
+                            </form>
+                      </form>
+                    </div>
                 </section>
-
-            <!-- </div> -->
             
-            <div class="row footer-row">
-                    <section class="footer"> <!-- TODO: Footer is not containing iFrame content -->
+                <div class="row footer-row">
+                    <section class="footer"> <!-- TODO: Footer is not containing iFrame content TODO: DELETE WHEN DEPLOYED! -->
                         <section class="col-md-4">
                             <iframe width="100%" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d631.1338198733573!2d-122.16176394869707!3d47.68433654688771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549012a13190dd03%3A0x2c8b6acdcc8b79a3!2sAmerican+Marketing!5e0!3m2!1sen!2sus!4v1491939434320" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </section>
@@ -116,8 +128,8 @@
                         <section class="legal col-md-12">&copy; D10Signs | American Marketing</section>
                     </section>
                 </div>
-            </div>
 
+            </div>
         </div>
  
     </body>

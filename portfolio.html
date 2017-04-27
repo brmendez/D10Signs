@@ -17,6 +17,14 @@
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+        <!-- PHOTOSWIPE GALLERY -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
+
+
         <!-- GOOGLE FONTS -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,600" rel="stylesheet">
@@ -35,10 +43,117 @@
         <div class="container-fluid">
             <div id="header"></div>
 
+            <header> <!-- TODO: DELETE WHEN DEPLOYED! -->
+                <div class="header-inner flex">
+                    <section class="brand">
+                        <img src="assets/img/d10logocopy.png" alt="logo">
+                        <aside class="logo-text">
+                            <h1>D10</h1>
+                            <h3 style="font-weight: 300;">SIGNS AND GRAPHICS</h3>
+                        </aside>
+                    </section>
+
+                    <nav>
+                        <ul class="nav-list-items">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li>References</li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li>Labels/Printing</li>
+                            <li>Decorated Apparel</li>
+                            <li class="contact-us">Contact Us</li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </header> <!-- TODO: DELETE WHEN DEPLOYED! -->
+
             <div class="row">
+
+                <section class="gallery">
+                    <h1>gallery</h1>
+                    
+                    <a href="assets/img/chh.png" data-size="1554x407">
+                        <img src="assets/img/chhcopy.png" alt="">
+                    </a>
+                    <a href="assets/img/jll.jpg" data-size="784x454">
+                        <img src="assets/img/jllcopy.jpg" alt="">
+                    </a>
+                    <a href="assets/img/target.png" data-size="670x890">
+                        <img src="assets/img/targetcopy.png" alt="">
+                    </a>
+
+                    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+                    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+                        <!-- Background of PhotoSwipe. 
+                             It's a separate element, as animating opacity is faster than rgba(). -->
+                        <div class="pswp__bg"></div>
+
+                        <!-- Slides wrapper with overflow:hidden. -->
+                        <div class="pswp__scroll-wrap">
+
+                            <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+                            <div class="pswp__container">
+                                <!-- don't modify these 3 pswp__item elements, data is added later on -->
+                                <div class="pswp__item"></div>
+                                <div class="pswp__item"></div>
+                                <div class="pswp__item"></div>
+                            </div>
+
+                            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                            <div class="pswp__ui pswp__ui--hidden">
+
+                                <div class="pswp__top-bar">
+
+                                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                                    <div class="pswp__counter"></div>
+
+                                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                                    <div class="pswp__preloader">
+                                        <div class="pswp__preloader__icn">
+                                          <div class="pswp__preloader__cut">
+                                            <div class="pswp__preloader__donut"></div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                    <div class="pswp__share-tooltip"></div> 
+                                </div>
+
+                                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                                </button>
+
+                                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                                </button>
+
+                                <div class="pswp__caption">
+                                    <div class="pswp__caption__center"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section> 
+
                 <section class="client-intro">
-                    <h1 class="uppercase">A Handful of Happy Clients</h1>
-                    <hr style="width: 450px;">
+                    <h1 class="uppercase">A Handful of Happy Clients <i class="fa fa-smile-o" aria-hidden="true"></i></h1>
+                    <hr style="width: 470px;">
                     <section class="clients flex">
                         <div class="client target">
                         </div>

@@ -352,11 +352,13 @@ fieldset {
 .fadeIn5 {-webkit-animation-delay: 4s; -moz-animation-delay: 4s; -o-animation-delay: 4s; animation-delay: 4s;}
 .fadeIn6 {-webkit-animation-delay: 4.5s; -moz-animation-delay: 4.5s; -o-animation-delay: 4.5s; animation-delay: 4.5s;}
 
-
+/*.gallery {
+	padding: 150px 0;
+	text-align: center;
+}*/
 
 .about-intro, .client-intro {
 	margin: 0 auto;
-	margin-bottom: 50px;
 	max-width: 750px;
 	padding: 110px 0;
 	text-align: center;
@@ -391,6 +393,14 @@ fieldset {
 
 .contact-form-inner { 
 	max-width: 500px; margin: 0 auto; width: 100%; 
+}
+
+/* PORTFOLIO */
+
+.gallery a {
+	padding: 5px;
+	margin-right: 10px;
+	/*display: inline-block;*/
 }
 
 .clients {

@@ -25,6 +25,7 @@
 
         <!-- FLEXSLIDER requires jQuery version 2.2.4. 3.2.1 is incompatible --> 
         <script src="js/index.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
         <!-- <script src="js/jquery.flexslider.js"></script> -->
@@ -34,6 +35,7 @@
     <body>
         <div class="container-fluid">
             <div id="header"></div>
+
             <header> <!-- TODO: DELETE WHEN DEPLOYED! -->
                 <div class="header-inner flex">
                     <section class="brand">
@@ -46,13 +48,13 @@
 
                     <nav>
                         <ul class="nav-list-items">
-                            <li>Home</li>
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Us</a></li>
-                            <li>References</li>
-                            <li>Portfolio</li>
-                            <li>Labels/Printing</li>
-                            <li>Decorated Apparel</li>
-                            <li class="contact-us">Contact Us</li>
+                            <!-- <li>References</li> -->
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="labels-printing.html">Labels/Printing</a></li>
+                            <!-- <li>Decorated Apparel</li> -->
+                            <li class="contact-us"><a href="contact.html">Contact Us</a></li>
                         </ul>
                     </nav>
 
@@ -60,10 +62,22 @@
             </header> <!-- TODO: DELETE WHEN DEPLOYED! -->
 
             <div class="row">
-                <section class="intro">
+
+                <section class="about hero"> <!-- Change class name, lives on home page now -->
                     <div class="intro-inner">
-                        <h1>Express Yourself</h1>
-                        <p class="subtext">D10 Signs and Graphics is your premier resource for signage graphics, metal/plastic fabrications installations.</p>
+                        <div class="tint"></div>
+                        <div class="col-md-4">
+                            <h1 class="fadeIn1 animated slideInLeft">Excellent Customer Service</h1>
+                            <h1 class="fadeIn2 animated slideInLeft">Prompt Responses</h1>
+                        </div>
+                        <div class="col-md-4">
+                            <h1 class="fadeIn3 animated fadeIn">Competitive Pricing</h1>
+                            <h1 class="fadeIn4 animated fadeIn">Dependable Products and Services</h1>
+                        </div>
+                        <div class="col-md-4">
+                            <h1 class="fadeIn5 animated slideInRight">Experienced Sign Solutions</h1>
+                            <h1 class="fadeIn6 animated slideInRight">Professional Installations</h1>
+                       </div>
                     </div>
                 </section>
 
@@ -72,6 +86,8 @@
                 </section>
 
                 <section class="main">
+                <h1 style="text-align: center;">Projects</h1>
+                <hr>
                     <!-- FLEXSLIDER randomize: true. Also added Quick fix in flexslider.css - line 93 -->
                     <div class="flexslider" style="width: 800px; margin: 0 auto;"> <!-- inline style to adjust size of Flexslider -->
                       <ul class="slides">
@@ -107,9 +123,11 @@
                       </form>
                     </div>
                 </section>
-            
-                <div class="row footer-row">
-                    <section class="footer"> <!-- TODO: Footer is not containing iFrame content TODO: DELETE WHEN DEPLOYED! -->
+
+                <div class="row footer-row"></div>
+
+                <div class="row footer-row"> <!-- TODO: DELETE WHEN DEPLOYED! -->
+                    <section class="footer"> <!-- TODO: Footer element is not containing iFrame content TODO: DELETE WHEN DEPLOYED! -->
                         <section class="col-md-4">
                             <iframe width="100%" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d631.1338198733573!2d-122.16176394869707!3d47.68433654688771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549012a13190dd03%3A0x2c8b6acdcc8b79a3!2sAmerican+Marketing!5e0!3m2!1sen!2sus!4v1491939434320" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </section>
@@ -123,13 +141,14 @@
                         </section>
                         <section class="social col-md-4">
                             <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                            <i class="fa fa-bath" aria-hidden="true"></i>
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
                         </section>
                         <section class="legal col-md-12">&copy; D10Signs | American Marketing</section>
                     </section>
-                </div>
+                </div> <!-- TODO: DELETE WHEN DEPLOYED! -->
 
             </div>
+
         </div>
  
     </body>

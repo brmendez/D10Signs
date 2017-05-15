@@ -19,9 +19,12 @@ html, body {
 body {
 	/*font-family: 'Nunito', sans-serif;*/
 	font-family: 'Oswald', sans-serif;
-	background: linear-gradient(to top, #42BFC1 0%,#4A61B0 0%,#42BFC1 100%) no-repeat;
-	/*background: linear-gradient(to top, #42BFC1 0%,#4A61B0 0%,#4CAF50 100%);*/
+	/*background: linear-gradient(to top, #42BFC1 0%,#4A61B0 0%,#42BFC1 100%) no-repeat;*/
 	/*background: #828181;*/
+}
+
+a, a:hover {
+	text-decoration: none;
 }
 
 p {
@@ -44,9 +47,6 @@ p {
 	text-align: center;
 	font-size: 50px;
 	animation: fadein 5s;
-}
-
-header {
 }
 
 hr {
@@ -145,12 +145,13 @@ nav {
 	font-size: 18px;
 	letter-spacing: 2px;
 	font-weight: 300;
-	text-decoration: none;
-	transition: 1s color;
+	transition: 500ms color;
 }
 
 .nav-list-items li:hover, .nav-list-items li a:hover {
-	color: #f5f5f5;
+	/*color: #f5f5f5;*/
+	color: #0071d2;
+
 }
 
 .contact-us {
@@ -162,8 +163,8 @@ nav {
 
 .intro {
 	background: #fff;
-	height: 378px;
-	margin: 200px 0 180px 0;
+	height: 278px;
+	margin: 100px 0 100px 0;
 }
 
 .intro-inner {
@@ -177,13 +178,19 @@ nav {
 	animation: fadein 4s;
 }
 
-.subtext {
+.subtext, .profile-name {
 	font-size: 22px;
 	font-weight: 300;
+	margin-bottom: 10px;
 }
 
 .main, .contact-form {
 	padding: 200px 0;
+}
+
+.contact-form-main {
+	padding: 60px;
+    animation: fadein 4s;
 }
 
 .contact-form-row {
@@ -208,132 +215,9 @@ nav {
 .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;}
 
 
-/*@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+/* ABOUT US */
 
-.container {
-  max-width: 400px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
-#contact textarea,
-#contact button[type="submit"] {
-  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
-}
-
-#contact {
-  background: #F9F9F9;
-  padding: 25px;
-  margin: 150px 0;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-
-#contact h3 {
-  display: block;
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
-
-#contact h4 {
-  margin: 5px 0 15px;
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
-}
-
-fieldset {
-  border: medium none !important;
-  margin: 0 0 10px;
-  min-width: 100%;
-  padding: 0;
-  width: 100%;
-}
-
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
-#contact textarea {
-  width: 100%;
-  border: 1px solid #ccc;
-  background: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-}
-
-#contact input[type="text"]:hover,
-#contact input[type="email"]:hover,
-#contact input[type="tel"]:hover,
-#contact input[type="url"]:hover,
-#contact textarea:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
-  border: 1px solid #aaa;
-}
-
-#contact textarea {
-  height: 100px;
-  max-width: 100%;
-  resize: none;
-}
-
-#contact button[type="submit"] {
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  background: #4CAF50;
-  color: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-  font-size: 15px;
-}
-
-#contact button[type="submit"]:hover {
-  background: #43A047;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
-}
-
-#contact button[type="submit"]:active {
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.copyright {
-  text-align: center;
-}
-
-#contact input:focus,
-#contact textarea:focus {
-  outline: 0;
-  border: 1px solid #aaa;
-}
-
-::-webkit-input-placeholder {
-  color: #888;
-}
-
-:-moz-placeholder {
-  color: #888;
-}
-
-::-moz-placeholder {
-  color: #888;
-}
-
-:-ms-input-placeholder {
-  color: #888;
-}*/
-
-
-.about.hero {
+.about.hero { /*Change class name, lives on home page now*/
 	height: 550px;
 	margin: 60px 0;
 }
@@ -365,12 +249,27 @@ fieldset {
 	animation: fadein 3s;
 }
 
+.profile-wrapper {
+	justify-content: space-around;
+}
+
+.profile-image {
+	border-radius: 100%;
+	filter: grayscale(100%);
+	margin-bottom: 10px;
+}
+.profile-title {
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
 .about-intro .subtext {
 	text-align: justify;
 }
 
 .about .intro-inner {
-	background: url(../assets/img/oldmil.png) no-repeat 50% 50%;
+	background: url(../assets/img/jll-hallway.png) no-repeat 50% 50%;
 	background-size: cover;
 	height: 100%;
 	max-width: none;
@@ -397,14 +296,13 @@ fieldset {
 
 /* PORTFOLIO */
 
-.gallery a {
+/*.gallery a {
 	padding: 5px;
 	margin-right: 10px;
-	/*display: inline-block;*/
-}
+	display: inline-block;
+}*/
 
 .clients {
-	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
@@ -471,6 +369,49 @@ fieldset {
 	/*background-size: cover;*/
 	/*width: 100px;*/
 	/*height: 120px;*/
+}
+
+/* LABELS/PRINTING */
+
+.labels-intro {
+    /*display: flex;*/
+    flex-wrap: wrap;
+    margin: 40px 0 0 0;
+}
+
+.wearables-heading {
+    width: 50%;
+    height: 400px;
+    background: url(../assets/img/shirts.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.bronze-heading {
+    width: 50%;
+    height: 400px;
+    background: url(../assets/img/cast-bronze.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.labels-heading {
+    width: 50%;
+    height: 400px;
+    background: url(../assets/img/floor-decals.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.award-heading {
+    width: 50%;
+    height: 400px;
+    background: url(../assets/img/award_trophy.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.cta {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    font-size: 36px;
 }
 
 fieldset {
@@ -540,3 +481,210 @@ textarea {
         vertical-align: middle;
     }
 }}
+
+
+
+/*.pic-container {
+	display: flex;
+	height: 300px;
+	max-width: 800px;
+	margin: 0 auto;
+}*/
+
+/*.left-pic  {*/
+	/*width: 50%;*/
+	/*margin: 0 10px -8px 0;*/  /* negative margin to left and right pic containers heights even */ 
+/*}*/
+
+/*.right-pics {
+	width: 50%;
+}
+
+.right-pics aside img {
+	height: 50%;
+	width: 45%;
+	margin: 0 8px 8px 0;
+	float: left;
+}*/
+
+
+/*content:url("http://imgur.com/SZ8Cm.jpg");*/
+
+/*.picContainer {
+	display: flex;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.leftPic img {
+	height: 300px;
+	width: 50%;
+	background: teal;
+	margin: 0 10px -8px 0;
+}
+
+.rightPics {
+	width: 50%;
+}
+
+aside {
+    height: 50%;
+    width: 45%;
+}
+.pic1, .pic2, .pic3, .pic4 {
+	float: left;
+	margin: 0 8px 8px 0;
+}
+
+.leftPic {
+	background: url(assets/img/kexp-donor-wall.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic1 {
+	background: url(assets/img/lotworks.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic2 {
+	background: url(assets/img/shorewoodHS.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic3 {
+	background: url(assets/img/oldmil.png) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic4 {
+	background: url(assets/img/chiefsealth.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}*/
+
+
+
+.picContainer {
+	display: flex;
+	justify-content: space-between;
+	height: 300px;
+	max-width: 960px;
+	margin: 60px auto;
+}
+
+.block-gallery {
+    flex-wrap: wrap;
+}
+
+.block-gallery a {
+	float: left;
+	margin: 0 16px 10px 0;
+	width: 18%;
+	height: 50%;
+}
+
+.leftPic {
+	width: 48%;
+	margin: 0 15px -8px 0;  /* negative margin to left and right pic containers heights even */ 
+}
+
+.ext-gallery-leftPic {
+
+}
+
+.rightPics {
+	height: 100%;
+	width: 50%;
+}
+
+.picContainer aside {
+    height: 50%;
+    width: 45%;
+}
+
+.stagger-gallery {
+	height: 50%;
+	width: 47%; 
+	float: left;
+	margin: 0 8px 8px 0;
+}
+
+.ext-gallery-main {
+	background: url(../assets/img/portfolio/ext/chief-sealth-front-ext.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.ext-dim-gallery-main {
+	background: url(../assets/img/portfolio/ext-dim/lynwood-rec-center-extdim.jpg) no-repeat 50% 50%;
+	background-size: cover;	
+}
+
+.monument-gallery-main {
+	background: url(../assets/img/portfolio/monument/oldmil-mon.png) no-repeat 50% 50%;
+	background-size: cover;	
+}
+
+.int-gallery-main {
+	background: url(../assets/img/jll-hallway.png) no-repeat 50% 50%;
+	width: 100%;
+	background-size: cover;	
+}
+
+.pic1 {
+	background: url(../assets/img/portfolio/ext/denny-wall-ext.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic2 {
+	background: url(../assets/img/portfolio/ext/chief-sealth-ext.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic3 {
+	background: url(../assets/img/portfolio/ext/sacred-heart-ext.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic4 {
+	background: url(../assets/img/portfolio/ext/aboda-ext.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic5 {
+	background: url(../assets/img/portfolio/ext-dim/everett-college-extdim.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic6 {
+	background: url(../assets/img/portfolio/ext-dim/jefferson-extdim.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic7 {
+	background: url(../assets/img/portfolio/ext-dim/tech-academy-extdim.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic8 {
+	background: url(../assets/img/portfolio/ext-dim/chief-sealth-extdim.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic9 {
+	background: url(../assets/img/portfolio/monument/lynwood-rec-mon.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic10 {
+	background: url(../assets/img/portfolio/monument/machias-elem-mon.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic11 {
+	background: url(../assets/img/portfolio/monument/meadowdale-mon.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.pic12 {
+	background: url(../assets/img/portfolio/monument/sacred-heart-mon.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}

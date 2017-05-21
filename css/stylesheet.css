@@ -23,6 +23,10 @@ body {
 	/*background: #828181;*/
 }
 
+a {
+	/*color: #fff;*/
+}
+
 a, a:hover {
 	text-decoration: none;
 }
@@ -77,8 +81,16 @@ hr {
 	text-align: center;
 }
 
+.footer .col-md-4 {
+    margin-bottom: 30px;
+}
+
 .footer .legal {
 	padding: 10px 0;
+}
+
+.footer .social a {
+	margin-right: 8px;
 }
 
 .footer .social .fa {
@@ -188,6 +200,10 @@ nav {
 	padding: 200px 0;
 }
 
+.contact-form input, textarea {
+    border-radius: 0; /* Turn off iPhone/Safari input element rounding */
+}
+
 .contact-form-main {
 	padding: 60px 60px 200px 60px;
     animation: fadein 4s;
@@ -203,16 +219,32 @@ nav {
 	text-align: center;
 }
 
+/* JQUERY VALIDATE OVERRIDES */
+
+label.error {
+	background: #ffc9c9;
+	margin-bottom: 0;
+	padding: 4px 0;
+	width: 100%;
+}
+
+/**** JQUERY VALIDATE OVERRIDES END ****/
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
 
+.flexslider {
+	width: 1000px !important;
+	margin: 0 auto !important;
+}
+
 /* Quick fix to eliminate seeing empty Flexslider container before first image loads
   refer to answer on: http://stackoverflow.com/questions/12717097/flexslider-slow-image-load
 */
-.flexslider .slides > li:first-child {display: block; -webkit-backface-visibility: visible;} 
-.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;}
+/*.flexslider .slides > li:first-child {display: block; -webkit-backface-visibility: visible;} */
+/*.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;}*/
 
 
 /* ABOUT US */
@@ -269,10 +301,10 @@ nav {
 }
 
 .about .intro-inner {
-	background: url(../assets/img/jll-hallway.png) no-repeat 50% 50%;
+	background: url(../assets/img/jll-hallway-1800-1350.jpg) no-repeat 50% 50%;
 	background-size: cover;
 	height: 100%;
-	max-width: none;
+	max-width: 100%;
 }
 
 .about .intro-inner .col-md-4 { /*TODO*/
@@ -472,97 +504,6 @@ textarea {
 	height: 150px;
 }
 
-
-/* MEDIA QUERIES */
-
-/* Safari 10.1+ http://stackoverflow.com/a/25975282/3935552 */
-@media not all and (min-resolution:.001dpcm) { @media {
-    .logo-text { 
-        vertical-align: middle;
-    }
-}}
-
-
-
-/*.pic-container {
-	display: flex;
-	height: 300px;
-	max-width: 800px;
-	margin: 0 auto;
-}*/
-
-/*.left-pic  {*/
-	/*width: 50%;*/
-	/*margin: 0 10px -8px 0;*/  /* negative margin to left and right pic containers heights even */ 
-/*}*/
-
-/*.right-pics {
-	width: 50%;
-}
-
-.right-pics aside img {
-	height: 50%;
-	width: 45%;
-	margin: 0 8px 8px 0;
-	float: left;
-}*/
-
-
-/*content:url("http://imgur.com/SZ8Cm.jpg");*/
-
-/*.picContainer {
-	display: flex;
-	max-width: 800px;
-	margin: 0 auto;
-}
-
-.leftPic img {
-	height: 300px;
-	width: 50%;
-	background: teal;
-	margin: 0 10px -8px 0;
-}
-
-.rightPics {
-	width: 50%;
-}
-
-aside {
-    height: 50%;
-    width: 45%;
-}
-.pic1, .pic2, .pic3, .pic4 {
-	float: left;
-	margin: 0 8px 8px 0;
-}
-
-.leftPic {
-	background: url(assets/img/kexp-donor-wall.jpg) no-repeat 50% 50%;
-	background-size: cover;
-}
-
-.pic1 {
-	background: url(assets/img/lotworks.jpg) no-repeat 50% 50%;
-	background-size: cover;
-}
-
-.pic2 {
-	background: url(assets/img/shorewoodHS.jpg) no-repeat 50% 50%;
-	background-size: cover;
-}
-
-.pic3 {
-	background: url(assets/img/oldmil.png) no-repeat 50% 50%;
-	background-size: cover;
-}
-
-.pic4 {
-	background: url(assets/img/chiefsealth.jpg) no-repeat 50% 50%;
-	background-size: cover;
-}*/
-
-
-
 .picContainer {
 	display: flex;
 	justify-content: space-between;
@@ -624,7 +565,7 @@ aside {
 }
 
 .int-gallery-main {
-	background: url(../assets/img/jll-hallway.png) no-repeat 50% 50%;
+	background: url(../assets/img/jll-hallway-1800-1350.jpg) no-repeat 50% 50%;
 	width: 100%;
 	background-size: cover;	
 }
@@ -688,3 +629,105 @@ aside {
 	background: url(../assets/img/portfolio/monument/sacred-heart-mon.jpg) no-repeat 50% 50%;
 	background-size: cover;
 }
+
+/* MEDIA QUERIES */
+
+/* Safari 10.1+ http://stackoverflow.com/a/25975282/3935552 */
+@media not all and (min-resolution:.001dpcm) { @media {
+    .logo-text { 
+        vertical-align: middle;
+    }
+}}
+
+@media screen and (max-width: 1296px) {
+
+	.about .intro-inner .break-tablet h1 {
+		font-size: 26px;
+	}
+
+	.flexslider {
+		width: 80% !important;
+	}	
+}
+
+@media screen and (max-width: 991px) {
+
+	header .header-inner {
+		display: block;
+		text-align: center;
+	}
+
+	.about .intro-inner .break-tablet {
+		top: 22%;
+	}
+
+	.footer .map {
+		width: 80%;
+		margin: 30px auto;
+	}
+}
+
+@media screen and (max-width: 691px) {
+
+	.about.hero {
+		margin: 0;
+		margin-top: -40px; /* pull hero closer to nav */
+	}
+
+	.about .intro-inner {
+		height: 80%;
+	}
+
+	.about .intro-inner .break-tablet {
+		top: 18%;
+	
+	}
+
+	.flexslider {
+		width: 100% !important;
+	}
+
+	.brand {
+		margin: 0px;
+    	margin-top: 20px;
+    	min-width: 90%;
+	}
+
+	.brand img {
+    	height: 50px;
+    	width: 50px;
+    	vertical-align: -webkit-baseline-middle;
+	}
+
+	.logo-text h1 {
+		text-align: left;
+		font-size: 32px;
+	}
+
+	.logo-text h3 {
+		font-size: 22px;
+	}
+
+	.nav-list-items .break-mobile {
+		margin-bottom: 10px;
+	}
+
+	.contact-form {
+		padding: 200px 20px;
+	}
+
+	.footer {
+		margin: 0;
+	}
+
+/*	.footer .map {
+		width: 100%;
+		margin: 30px auto;
+	}*/
+
+	.footer .legal {
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 991px) {  }

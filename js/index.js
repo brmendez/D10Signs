@@ -10,21 +10,22 @@ $(window).load(function() {
 function showSlide(slide) {
 
 	// http://stackoverflow.com/questions/5899783/detect-safari-using-jquery
-    var is_chrome = navigator.userAgent.indexOf('Chrome') > -1
-	, is_safari = navigator.userAgent.indexOf('Safari') > -1
-	, is_firefox = navigator.userAgent.indexOf('Firefox') > -1
-	, is_opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
-	if ((is_chrome)&&(is_safari)) {is_safari=false;}
+    var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+    var is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
+    var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+    var is_safari = navigator.userAgent.indexOf('Safari') > -1;
+    var is_opera = navigator.userAgent.toLowerCase().indexOf('op') > -1;
+    if ((is_chrome)&&(is_safari)) {is_safari=false;}
     if ((is_chrome)&&(is_opera)) {is_chrome=false;}
-
 
 	// console.log(slide);
 	let index = slide.index('a')
 	, slides = []
 	, pswpElement = document.querySelectorAll('.pswp')[0];
-
-	if (is_firefox || is_safari)  {index = (index - 11)};
+	// if (is_firefox && !is_safari) {index = (index - 5)};
 	if (is_chrome) {index = (index - 5)};
+	if (is_safari || is_firefox) {index = (index - 5)};  // PROD ***** index - 5 works on web host (PROD), but not locally (DEV)
+	// if (is_safari || is_firefox) {index = (index - 11)}; // DEV
 
 	// console.log(index);
 
@@ -74,6 +75,67 @@ function showSlide(slide) {
 	// gallery.goTo(index);
 }
 
+function submitForm(form) {
+	// var $form = $('form');
+
+	// if (!$form.valid()) {return console.log('form not valid!')}
+
+	// $('#contact').validate({
+ //    	// rules: {
+ //    	// 	name: 'required'
+ //    	//   , subject: 'required'
+ //    	//   , message: 'required'
+ //    	// },
+
+ //    	submitHandler: function() {
+ //    		console.log('contact form done');
+ //    	}
+	// });
+
+	var ajaxReqVars = {
+		name: form.name.value
+	  , email: form.email.value
+	  , phone: form.phone.value ? form.phone.value : false
+	  , subject: $('#contact input[name="subject"]').val()
+	  , message: $('#contact textarea[name="message"]').val()
+	}
+
+	console.log(ajaxReqVars);
+}
+
+function runJqueryValidate() {
+	$('#contact').validate({
+		rules: {
+			phone: {
+				phoneUS: true // additional-methods.min.js required
+			},
+			email: {
+				required: true
+			  , email: true
+			},
+			name: {
+				required: true
+			  // , minlength: 2
+			}
+		},
+		messages: {
+			subject: 'Please enter a subject'
+		  , message: 'Please enter a message'
+		},
+
+        submitHandler: function (form) { 
+
+        	// if (form.valid()) { 
+        	// 	console.log('form is valid') 
+        	// }
+        	submitForm(form);
+
+            // alert('valid form submitted');
+            return false;
+        }
+	});
+}
+
 
 $(function() {
 	$('#header').load('header.html');
@@ -83,5 +145,15 @@ $(function() {
 		e.preventDefault();
 		showSlide($(this));
 	});
+
+	runJqueryValidate();
+
+    // $('#contact-submit').click(function(e) {
+    	// submitForm();
+        // e.preventDefault();
+    // });
+
+
+
 
 });

@@ -1,13 +1,19 @@
-$(window).load(function() {
-	$('.flexslider').flexslider({
-	    slideshowSpeed: 3500
-	});
-});
-
 function submitForm(form) {
 	// var $form = $('form');
 
 	// if (!$form.valid()) {return console.log('form not valid!')}
+
+	// $('#contact').validate({
+ //    	// rules: {
+ //    	// 	name: 'required'
+ //    	//   , subject: 'required'
+ //    	//   , message: 'required'
+ //    	// },
+
+ //    	submitHandler: function() {
+ //    		console.log('contact form done');
+ //    	}
+	// });
 
 	var ajaxReqVars = {
 		name: form.name.value
@@ -16,12 +22,6 @@ function submitForm(form) {
 	  , subject: $('#contact input[name="subject"]').val()
 	  , message: $('#contact textarea[name="message"]').val()
 	}
-
-	$.ajax({
-	  method: "POST",
-	  url: "php/contact.php",
-	  data: ajaxReqVars
-	});
 
 	console.log(ajaxReqVars);
 }
@@ -53,11 +53,13 @@ function runJqueryValidate() {
         	// }
         	submitForm(form);
 
-            alert('valid form submitted');
+            // alert('valid form submitted');
             return false;
         }
 	});
 }
+
+
 
 
 $(function() {

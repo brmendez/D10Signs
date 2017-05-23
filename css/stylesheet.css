@@ -90,6 +90,7 @@ hr {
 }
 
 .footer .social a {
+	color: #fff;
 	margin-right: 8px;
 }
 
@@ -176,7 +177,7 @@ nav {
 .intro {
 	background: #fff;
 	height: 278px;
-	margin: 100px 0 100px 0;
+	margin: 20px 0;
 }
 
 .intro-inner {
@@ -197,7 +198,7 @@ nav {
 }
 
 .main, .contact-form {
-	padding: 200px 0;
+	padding: 80px 0;
 }
 
 .contact-form input, textarea {
@@ -397,17 +398,11 @@ label.error {
 	filter: none;
 }
 
-.clients .client img {
-	/*background-size: cover;*/
-	/*width: 100px;*/
-	/*height: 120px;*/
-}
-
 /* LABELS/PRINTING */
 
 .labels-intro {
     /*display: flex;*/
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     margin: 40px 0 0 0;
 }
 
@@ -665,6 +660,23 @@ textarea {
 		width: 80%;
 		margin: 30px auto;
 	}
+
+	/* ABOUT US */
+	.about-intro .subtext {
+		max-width: 80%;
+    	margin: 0 auto;
+	}
+
+	/* PORTFOLIO */
+	.picContainer {
+		max-width: 85%;
+	}
+
+	.clients {
+		max-width: 95%;
+		margin: 0 auto;
+	}
+
 }
 
 @media screen and (max-width: 691px) {
@@ -720,14 +732,124 @@ textarea {
 		margin: 0;
 	}
 
-/*	.footer .map {
-		width: 100%;
-		margin: 30px auto;
-	}*/
-
 	.footer .legal {
 		padding: 0;
 	}
+
 }
 
-@media screen and (max-width: 991px) {  }
+@media screen and (max-width: 631px) {  
+	.picContainer {
+		display: block;
+		margin: 20px auto;
+	}
+
+	.leftPic {
+	    display: block;
+	    height: 100%;
+	    /* margin: 0 auto; */
+	    width: 100%;
+	}
+
+	.rightPics {
+		margin-top: 20px;
+		width: 100%;
+	}
+
+	.rightPics .stagger-gallery {
+		width: 100%;
+		margin: 20px 0;
+	}
+
+	.client-intro {
+		clear: left;
+		padding: 80px 0;
+	}
+
+	.clients {
+		display: block;
+	}
+
+	.clients .client {
+		/*width: 100%;*/
+		margin: 22px auto;
+	}
+}
+
+@media screen and (max-width: 544px) {  
+	
+	/* ABOUT US */
+
+	.about-intro {
+	    padding: 54px 0;
+	}
+
+	.about-intro .subtext {
+		max-width: 80%;
+    	margin: 0 auto;
+	}
+
+	.profile-wrapper {
+		display: block;
+	}
+
+	.profile {
+		margin-bottom: 30px;
+	}
+
+	/*  LABELS/PRINTING */
+
+	.cta {
+		margin: 40px auto;
+		font-size: 26px;
+	}
+
+	.labels-intro hr {
+		display: block !important; /* overwrite inline style */
+		width: 100%;
+	}
+
+	.decals-inner {
+		flex-wrap: wrap-reverse;
+	}
+
+	.wearables-inner {
+		flex-wrap: wrap;
+	}
+
+	.bronze-inner {
+		flex-wrap: wrap-reverse;
+	}
+
+	.award-inner {
+		flex-wrap: wrap;
+	}
+
+	.heading {
+		width: 100%;
+	}
+
+	/* PORTFOLIO */
+	.client-intro h1 {
+		font-size: 26px;
+	}
+	.client-intro hr {
+		width: 330px !important;  /* overwrite inline style */
+	}
+
+	/* CONTACT US */
+	.intro .intro-inner h1 {
+		font-size: 26px
+	}
+
+	.intro .intro-inner .subtext {
+		font-size: 18px;
+		padding: 0 20px;
+		text-align: center;
+	}
+
+	.contact-form {
+		padding: 20px 20px 200px 20px;
+	}
+
+}

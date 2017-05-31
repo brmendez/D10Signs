@@ -532,6 +532,13 @@ textarea {
 	margin: 0 15px -8px 0;  /* negative margin to left and right pic containers heights even */ 
 }
 
+.rightPic { /* special case - use when only 2 images */
+    display: block;
+    height: 309px;
+    /* margin: 0 auto; */
+    width: 100%;
+}
+
 .ext-gallery-leftPic {
 
 }
@@ -572,6 +579,19 @@ textarea {
 	background: url(../assets/img/jll-hallway-1800-1350.jpg) no-repeat 50% 50%;
 	width: 100%;
 	background-size: cover;	
+}
+
+
+/*.int-gallery-main {
+	background: url(../assets/img/interior-banner.jpg) no-repeat 50% 50%;
+	width: 100%;
+	background-size: cover;	
+}*/
+
+
+.pic13 {
+	background: url(../assets/img/interior-banner.jpg) no-repeat 50% 50%;
+	background-size: cover;
 }
 
 .pic1 {
@@ -757,6 +777,12 @@ textarea {
 	    display: block;
 	    height: 100%;
 	    /* margin: 0 auto; */
+	    width: 100%;
+	}
+
+	.rightPic {
+	    display: block;
+	    height: 100%;
 	    width: 100%;
 	}
 

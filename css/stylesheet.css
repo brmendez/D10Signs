@@ -129,7 +129,6 @@ nav {
 }
 
 .logo-text {
-
 	display: inline-grid;
     letter-spacing: 4px;
 	margin-left: 15px;
@@ -141,6 +140,13 @@ nav {
 
 .logo-text > h1, .logo-text > h3  {
 	margin: 0;
+}
+
+.logo-subtext {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
 }
 
 .nav-list-items {

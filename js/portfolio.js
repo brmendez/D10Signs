@@ -14,8 +14,8 @@ function showSlide(slide) {
 	, slides = []
 	, pswpElement = document.querySelectorAll('.pswp')[0];
 	// if (is_firefox && !is_safari) {index = (index - 5)};
-	if (is_chrome) {index = (index - 5)};
-	if (is_safari || is_firefox) {index = (index - 5)};  // PROD ***** index - 5 works on web host (PROD), but not locally (DEV)
+	if (is_chrome) {index = (index - 4)};
+	if (is_safari || is_firefox) {index = (index - 4)};  // PROD ***** index - 5 works on web host (PROD), but not locally (DEV)
 	// if (is_safari || is_firefox) {index = (index - 11)}; // DEV
 
 	// console.log(index);

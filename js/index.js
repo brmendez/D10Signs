@@ -53,7 +53,6 @@ function runJqueryValidate() {
         	// }
         	submitForm(form);
 
-            alert('valid form submitted');
             return false;
         }
 	});

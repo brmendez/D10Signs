@@ -121,6 +121,8 @@ hr {
 
 nav {
 	margin: 22px;
+	/*display: flex;*/
+	justify-content: space-around;
 }
 
 .brand {
@@ -128,28 +130,35 @@ nav {
 	min-width: 370px;
 }
 
-.logo-text {
+.brand .logo {
+	height: 100px;
+	margin-bottom: 4px;
+}
+
+/*.logo-text {
 	display: inline-grid;
     letter-spacing: 4px;
 	margin-left: 15px;
-}
+}*/
 
-.logo-text h1 {
+/*.logo-text h1 {
     font-size: 48px;
-}
+}*/
 
-.logo-text > h1, .logo-text > h3  {
+/*.logo-text > h1, .logo-text > h3  {
 	margin: 0;
-}
+}*/
 
 .logo-subtext {
-    font-weight: 300;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 2px;
+    padding-left: 22px;
 }
 
 .nav-list-items {
+	/*display: flex;*/
+	justify-content: space-around;
 	list-style: none;
 }
 
@@ -161,7 +170,7 @@ nav {
 	color: #000;
 	display: inline-block;
 	cursor: pointer;
-	font-size: 18px;
+	font-size: 20px;
 	letter-spacing: 2px;
 	font-weight: 300;
 	transition: 500ms color;
@@ -664,9 +673,9 @@ textarea {
 
 /* Safari 10.1+ http://stackoverflow.com/a/25975282/3935552 */
 @media not all and (min-resolution:.001dpcm) { @media {
-    .logo-text { 
+    /*.logo-text { 
         vertical-align: middle;
-    }
+    }*/
 }}
 
 @media screen and (max-width: 1296px) {
@@ -716,6 +725,10 @@ textarea {
 
 @media screen and (max-width: 691px) {
 
+	.nav-list-items {
+		display: block;
+	}
+
 	.about.hero {
 		margin: 0;
 		margin-top: -40px; /* pull hero closer to nav */
@@ -741,18 +754,21 @@ textarea {
 	}
 
 	.brand img {
-    	height: 50px;
-    	width: 50px;
+    	height: 90px !important;
     	vertical-align: -webkit-baseline-middle;
 	}
 
-	.logo-text h1 {
+	/*.logo-text h1 {
 		text-align: left;
 		font-size: 32px;
-	}
+	}*/
 
-	.logo-text h3 {
+	/*.logo-text h3 {
 		font-size: 22px;
+	}*/
+
+	.logo-subtext {
+		padding-left: 6px;
 	}
 
 	.nav-list-items .break-mobile {
